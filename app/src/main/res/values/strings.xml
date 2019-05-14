@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">JSM Lifting</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_workouts">Workouts</string>
+    <string name="button_tutorials">Tutorials</string>
+    <string name="button_kit">Kit</string>
+    <string name="header_jsmlifting">JSM Lifting</string>
+    <string name="text_SnatchTech">Technical Snatch</string>
+    <string name="text_CAJTech">Technical Clean and Jerk</string>
+    <string name="text_SnatchStrength">Snatch Strength</string>
+    <string name="text_CleanAndJerkStrength">Clean and Jerk Strength</string>
+    <string name="text_lightaccessories">Light Accessories</string>
+    <string name="text_postcomp">Post Competition DeLoad</string>
+    <string name="text_postcomp2">Post Compeition DeLoad 2</string>
+    <string name="btn_snatchvideo">How to Snatch</string>
+    <string name="btn_cleanvideo">How to Clean and Jerk</string>
+    <string name="btn_snatchbalance">How to Snatch Balance</string>
+    <string name="btn_squat">How to Squat</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button_weightcatpage">Weight Cats and Age Groups</string>
+    <string name="btn_browsertest">Test</string>
+    <string name="text_shoes">Weightlifting Shoes</string>
+    <string name="text_knee">Knee Sleeves</string>
+    <string name="text_acc">Accessories</string>
+</resources>
