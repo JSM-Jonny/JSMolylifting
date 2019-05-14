@@ -77,9 +77,6 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.ExampleViewHolder> {
         exampleViewHolder.mImageView.setImageResource(currentItem.getmImageResource());
         exampleViewHolder.mTextView1.setText(currentItem.getmText1());
         exampleViewHolder.mTextView2.setText(currentItem.getmText2());
-        exampleViewHolder.mImageViewA.setImageResource(currentItem.getmImageResourceA());
-        exampleViewHolder.mTextView1A.setText(currentItem.getmText1A());
-        exampleViewHolder.mTextView2A.setText(currentItem.getmText2A());
 
     }
 

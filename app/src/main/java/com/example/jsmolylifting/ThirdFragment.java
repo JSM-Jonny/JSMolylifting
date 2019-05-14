@@ -27,7 +27,7 @@ public class ThirdFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.kitpage, container, false);
+        view = inflater.inflate(R.drawable.dumbbell, container, false);
         //browsertest = MyView.findViewById(R.id.btn_browser);
         //browsertest.setOnClickListener(new View.OnClickListener(){
 
@@ -44,7 +44,7 @@ public class ThirdFragment extends Fragment {
         RecyclerView mRecyclerView = view.findViewById(R.id.recyclerView);
         /* creating the cards */
         mItemList = new ArrayList<>();
-        mItemList.add(new Item2(R.drawable.dumbbell, "Reebok Legacy Lifter", "£150", R.drawable.dumbbell, "Nike Romaleo 3xd", "£170", "https://www.reebok.co.uk/reebok-legacy-lifter/BD1793.html", "\"https://www.nike.com/gb/t/romaleos-3-xd-training-shoe-JC5JSR\""));
+        mItemList.add(new Item2(R.drawable.dumbbell, "Reebok Legacy Lifter", "£150", "https://www.reebok.co.uk/reebok-legacy-lifter/BD1793.html"));
         //mItemList.add(new Item2(R.drawable.dumbbell, "Adidas Powerlift 3", "£80", R.drawable.dumbbell, "Adidas AdiPower", "£170"));
         //mItemList.add(new Item2(R.drawable.dumbbell, "SBD", "£70", R.drawable.dumbbell, "Strength Shop", "£40"));
         //mItemList.add(new Item2(R.drawable.dumbbell, "Wrist Wraps", "£10", R.drawable.dumbbell, "Thumb Tape", "£6"));
@@ -60,18 +60,4 @@ public class ThirdFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
     }
 
-    public void browser1(View view, String url){
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        startActivity(browserIntent);
-    }
-
-    public void changeItem(int position, String text, ArrayList<Item2> ItemList){
-        ItemList.get(position).changeText1(text);
-        mAdapter.notifyItemChanged(position);
-    }
-
-    public void changeItem2(int position, String text, ArrayList<Item2> ItemList){
-        ItemList.get(position).changeText2(text);
-        mAdapter.notifyItemChanged(position);
-    }
 }
