@@ -39,12 +39,12 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ExampleViewHolder> {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    WorkoutFragment workoutfragment = new WorkoutFragment();
-                    FragmentManager fragmentManager= getActivity().getFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.,fragment2,"tag");
-                    fragmentTransaction.addToBackStack(null);
-                    fragmentTransaction.commit();
+                    if (listener != null){
+                        int position = getAdapterPosition();
+                        if(position != RecyclerView.NO_POSITION){
+                            listener.onItemClick(position);
+                        }
+                    }
                 }
             });
         }

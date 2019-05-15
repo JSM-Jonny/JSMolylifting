@@ -45,16 +45,16 @@ public class WeightCat extends Fragment {
         btnViewData.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), )
+                Intent in = new Intent(getActivity(), DatabaseContent.class);
+                startActivity(in);
             }
         });
+
+
 
         return MyView;
     }
 
-    public void LookData(View v){
-        
-    }
 
     public void AddData(String newEntry){
         boolean insertData = mDatabaseHelper.addData(newEntry);
