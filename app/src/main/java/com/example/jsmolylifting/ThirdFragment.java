@@ -1,5 +1,6 @@
 package com.example.jsmolylifting;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.media.Image;
 import android.net.Uri;
@@ -19,23 +20,15 @@ import java.util.ArrayList;
 
 public class ThirdFragment extends Fragment {
     View view;
-    Button browsertest;
     private Adapter2 mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private ArrayList<Item2> mItemList = new ArrayList<>();
 
+    @SuppressLint("ResourceType")
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.drawable.dumbbell, container, false);
-        //browsertest = MyView.findViewById(R.id.btn_browser);
-        //browsertest.setOnClickListener(new View.OnClickListener(){
-
-            /*@Override
-            public void onClick(View v) {
-                browser1(v);
-            }
-        });*/
+        view = inflater.inflate(R.layout.kitpage, container, false);
         return view;
     }
 
@@ -44,10 +37,10 @@ public class ThirdFragment extends Fragment {
         RecyclerView mRecyclerView = view.findViewById(R.id.recyclerView);
         /* creating the cards */
         mItemList = new ArrayList<>();
-        mItemList.add(new Item2(R.drawable.dumbbell, "Reebok Legacy Lifter", "£150", "https://www.reebok.co.uk/reebok-legacy-lifter/BD1793.html"));
-        //mItemList.add(new Item2(R.drawable.dumbbell, "Adidas Powerlift 3", "£80", R.drawable.dumbbell, "Adidas AdiPower", "£170"));
-        //mItemList.add(new Item2(R.drawable.dumbbell, "SBD", "£70", R.drawable.dumbbell, "Strength Shop", "£40"));
-        //mItemList.add(new Item2(R.drawable.dumbbell, "Wrist Wraps", "£10", R.drawable.dumbbell, "Thumb Tape", "£6"));
+        mItemList.add(new Item2(R.drawable.dumbbell, "Reebok Legacy Lifter", "£150", "Perfect for lifters of any skill level.", "https://www.reebok.co.uk/reebok-legacy-lifter/BD1793.html"));
+        mItemList.add(new Item2(R.drawable.dumbbell, "Adidas Powerlift 4", "£80", "A great choice for beginners.", "https://www.adidas.co.uk/powerlift-4-shoes/BC0343.html"));
+        mItemList.add(new Item2(R.drawable.dumbbell, "SBD", "£70", "High-End knee sleeve choice, best choice available.", "https://www.sbdapparel.com/product/sbd-knee-sleeves-winter-range-2018/"));
+        mItemList.add(new Item2(R.drawable.dumbbell, "Wrist Straps", "£10", "A good accessory for doing hang exercises.", "https://eu.warmbody-coldmind.com/collections/mens/products/weightlifting-wrist-straps-4-options?variant=19038171725913"));
 
         mLayoutManager = new LinearLayoutManager(getActivity());
         mAdapter = new Adapter2(mItemList);
@@ -55,9 +48,20 @@ public class ThirdFragment extends Fragment {
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
 
+        mAdapter.setOnItemClickListener(new Adapter2.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                String url = mItemList.get(position).getmUrl();
+                browser(url);
+            }
+        });
+
 
 
         super.onViewCreated(view, savedInstanceState);
     }
-
+    public void browser(String url){
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(browserIntent);
+    }
 }
