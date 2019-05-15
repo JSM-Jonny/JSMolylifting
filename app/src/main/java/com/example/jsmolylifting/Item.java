@@ -6,17 +6,13 @@ public class Item {
     private int mImageResource;
     private String mText1;
     private String mText2;
+    private String mText3;
 
-    public Item(int imageResource, String text1, String text2){
+    public Item(int imageResource, String text1, String text2, String id){
         mImageResource = imageResource;
         mText1 = text1;
         mText2 = text2;
-    }
-
-    public void changeText1(String text){
-        mText1 = text;
-        Log.d("method change text", "method has been run");
-        Log.d("content of text", text);
+        mText3 = id;
     }
 
     public int getmImageResource(){
@@ -29,5 +25,9 @@ public class Item {
 
     public String getmText2(){
         return mText2;
+    }
+
+    public String getmText3(){
+        return mText3;
     }
 }

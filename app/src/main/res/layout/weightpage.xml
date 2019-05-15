@@ -38,5 +38,14 @@
         android:layout_marginRight="81dp"
         android:text="View Data" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="244dp"
+        android:text="Button" />
+
 
 </RelativeLayout>

@@ -37,10 +37,11 @@ public class ThirdFragment extends Fragment {
         RecyclerView mRecyclerView = view.findViewById(R.id.recyclerView);
         /* creating the cards */
         mItemList = new ArrayList<>();
-        mItemList.add(new Item2(R.drawable.dumbbell, "Reebok Legacy Lifter", "£150", "Perfect for lifters of any skill level.", "https://www.reebok.co.uk/reebok-legacy-lifter/BD1793.html"));
-        mItemList.add(new Item2(R.drawable.dumbbell, "Adidas Powerlift 4", "£80", "A great choice for beginners.", "https://www.adidas.co.uk/powerlift-4-shoes/BC0343.html"));
-        mItemList.add(new Item2(R.drawable.dumbbell, "SBD", "£70", "High-End knee sleeve choice, best choice available.", "https://www.sbdapparel.com/product/sbd-knee-sleeves-winter-range-2018/"));
-        mItemList.add(new Item2(R.drawable.dumbbell, "Wrist Straps", "£10", "A good accessory for doing hang exercises.", "https://eu.warmbody-coldmind.com/collections/mens/products/weightlifting-wrist-straps-4-options?variant=19038171725913"));
+        mItemList.add(new Item2(R.drawable.reebok, "Reebok Legacy Lifter", "£149.95", "Perfect for lifters of any skill level.", "https://www.reebok.co.uk/reebok-legacy-lifter/BD1793.html"));
+        mItemList.add(new Item2(R.drawable.adidas4, "Adidas Powerlift 4", "£74.95", "A great choice for beginners.", "https://www.adidas.co.uk/powerlift-4-shoes/BC0343.html"));
+        mItemList.add(new Item2(R.drawable.singlet, "WBCM Singlet", "£90.00", "A requirement for most weightlifting competitions.", "https://eu.warmbody-coldmind.com/collections/mens/products/mens-compression-singlet?variant=19038172610649"));
+        mItemList.add(new Item2(R.drawable.knee, "SBD", "£64.99", "High-End knee sleeve choice, best choice available.", "https://www.sbdapparel.com/product/sbd-knee-sleeves-winter-range-2018/"));
+        mItemList.add(new Item2(R.drawable.straps, "Wrist Straps", "£15.00", "A good accessory for doing hang exercises.", "https://eu.warmbody-coldmind.com/collections/mens/products/weightlifting-wrist-straps-4-options?variant=19038171725913"));
 
         mLayoutManager = new LinearLayoutManager(getActivity());
         mAdapter = new Adapter2(mItemList);

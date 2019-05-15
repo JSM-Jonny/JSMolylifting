@@ -7,8 +7,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 class DatabaseHelper extends SQLiteOpenHelper {
-    private static final String TAG = "DatabaseHelper";
 
+    // creating strings that will be used within the database
+    private static final String TAG = "DatabaseHelper";
     private static final String TABLE_NAME = "user_table";
     private static final String COL1 = "ID";
     private static final String COL2 = "Name";
@@ -19,6 +20,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        // forming the string that will be used to create the table
         String createTable = "CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " + COL2 + " TEXT)";
         db.execSQL(createTable);
     }

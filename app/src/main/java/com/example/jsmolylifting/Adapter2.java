@@ -59,7 +59,7 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.ExampleViewHolder> {
     @NonNull
     @Override
     public Adapter2.ExampleViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cardview, viewGroup, false);
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.kitcard, viewGroup, false);
         ExampleViewHolder evh = new ExampleViewHolder(v, mListener);
         return evh;
     }
@@ -77,7 +77,5 @@ public class Adapter2 extends RecyclerView.Adapter<Adapter2.ExampleViewHolder> {
     public int getItemCount() {
         return mList.size();
     }
-
-
 
 }

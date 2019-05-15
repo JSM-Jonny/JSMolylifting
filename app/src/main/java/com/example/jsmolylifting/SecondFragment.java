@@ -18,7 +18,10 @@ public class SecondFragment extends Fragment {
     public View MyView;
     Button snatchbutton;
     VideoView videov;
+    VideoView videov2;
+    Button cjbutton;
     MediaController mediaC;
+    MediaController mediaC2;
 
 
     @Nullable
@@ -26,14 +29,27 @@ public class SecondFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         MyView = inflater.inflate(R.layout.tutorialspage, container, false);
         snatchbutton = MyView.findViewById(R.id.snatchbtn);
+        cjbutton = MyView.findViewById(R.id.CJbtn);
         videov = MyView.findViewById(R.id.snatchView);
+        videov2 = MyView.findViewById(R.id.CJView);
+
         snatchbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 videoplay(v);
             }
         });
+
+        cjbutton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                videoplay2(v);
+            }
+        });
+
         mediaC = new MediaController(getActivity());
+        mediaC2 = new MediaController(getActivity());
 
         return MyView;
     }
@@ -46,6 +62,16 @@ public class SecondFragment extends Fragment {
         videov.setMediaController(mediaC);
         mediaC.setAnchorView(videov);
         videov.start();
+
+    }
+
+    public void videoplay2(View v){
+        String videopath = "android.resource://com.example.jsmolylifting/"+R.raw.powercleanjerk;
+        Uri uri = Uri.parse(videopath);
+        videov2.setVideoURI(uri);
+        videov2.setMediaController(mediaC2);
+        mediaC2.setAnchorView(videov2);
+        videov2.start();
 
     }
 
